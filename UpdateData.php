@@ -49,7 +49,7 @@ if (empty(getenv("DATABASE_URL"))){
 
         // return the number of row affected
         //return $stmt->rowCount();
-$sql = "UPDATE product_details SET name = '$_POST[newname]', release_date='$_POST[newdate]', '$_POST[newprice]' WHERE product_id = '$_POST[id]'";
+$sql = "UPDATE product_details SET name = '$_POST[newname]', release_date ='$_POST[newdate]', price = '$_POST[newprice]' WHERE id = '$_POST[id]'";
       $stmt = $pdo->prepare($sql);
 if($stmt->execute() == TRUE){
     echo "Record updated successfully.";

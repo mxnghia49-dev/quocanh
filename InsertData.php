@@ -15,7 +15,7 @@ list-style: none;
         <form name="InsertData" action="InsertData.php" method="POST" >
             <li>id:</li><li><input type="text" name="id" /></li>
             <li>name:</li><li><input type="text" name="name" /></li>
-            <li>Release Date:</li><li><input type="date" name="relase_date" /></li>
+            <li>Release Date:</li><li><input type="date" name="release_date" /></li>
             <li>Price:</li><li><input type="text" name="price" /></li>
             <li><input type="submit" value="Insert" /></li>
         </form>
