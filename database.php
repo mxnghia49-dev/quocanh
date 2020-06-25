@@ -46,8 +46,9 @@
                     <thead>
                     <tr>
                         <th>Product_ID</th>
-                        <th>Product_name</th>
-                        <th>NSX</th>
+                        <th>name</th>
+                        <th>Release date</th>
+                        <th>Price</th>
                     </tr>
                     </thead>
                     <tbody>
