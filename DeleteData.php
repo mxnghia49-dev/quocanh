@@ -34,7 +34,7 @@ if (empty(getenv("DATABASE_URL"))){
 ));
 }  
 
-$sql = "DELETE FROM product WHERE id = '$_POST[id]'";
+$sql = "DELETE FROM product_detail WHERE id = '$_POST[id]'";
 $stmt = $pdo->prepare($sql);
 if($stmt->execute() == TRUE){
     echo "deleted successfully.";

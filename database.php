@@ -23,7 +23,7 @@
         ));
         }  
 
-        $sql = "SELECT * FROM product ORDER BY id";
+        $sql = "SELECT * FROM product_detail ORDER BY id";
         $stmt = $pdo->prepare($sql);
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $stmt->execute();
