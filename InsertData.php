@@ -10,7 +10,7 @@ list-style: none;
 </style>
 </head>
 <body>
-<h1>Thêm DL vào table product</h1>
+<h1>Insert new data</h1>
     <ul>
         <form name="InsertData" action="InsertData.php" method="POST" >
             <li>id:</li><li><input type="text" name="id" /></li>
