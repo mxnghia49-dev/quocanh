@@ -2,9 +2,9 @@
 <html>
 <body>
 
-<h1>Xóa DL</h1>
+<h1>Delete data</h1>
 
-<h4>ID SP cần xóa</h4>
+<h4>Id product need to delete</h4>
 
 <form name="delete" method="POST" action="DeleteData.php">
     <lable for="id">ID Sản Phẩm</label><input type="text" name="id" /><br>
