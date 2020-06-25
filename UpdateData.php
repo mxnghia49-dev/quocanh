@@ -54,6 +54,7 @@ $sql = "UPDATE product_details SET name = '$_POST[newname]', release_date='$_POS
 if($stmt->execute() == TRUE){
     echo "Record updated successfully.";
 } else {
+    $echo $sql;
     echo "Error updating record. ";
 }
     

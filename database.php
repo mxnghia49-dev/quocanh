@@ -32,10 +32,6 @@
     <h1>Database interaction</h1>
     <button onclick="location.href='index.php'">Back to home page</button>
     <div class="container">
-        <div class="grid-view">
-            <div class="grid-item">
-                <a href="#" onClick="displayData()"><b>Connect to database</b></a>
-            </div>
             <div class="grid-item">
                 <a href="./InsertData.php" target="framename"><b>Inser data</b></a>
             </div>
