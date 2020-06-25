@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h1>Cập nhật DL sản phẩm</h1>
+<h1>Update data</h1>
 
 <?php
 ini_set('display_errors', 1);
