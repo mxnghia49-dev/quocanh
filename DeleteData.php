@@ -8,7 +8,7 @@
 
 <form name="delete" method="POST" action="DeleteData.php">
     <lable for="id">ID Sản Phẩm</label><input type="text" name="id" /><br>
-    <input type="submit" value="Xóa">
+    <input type="submit" value="Delete">
 </form>
 
 <?php
