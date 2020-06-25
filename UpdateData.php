@@ -10,9 +10,11 @@ echo "Update database!";
 ?>
 
 <form name="update" action="UpdateData.php" method="POST">
-    <label for="id">ID sản phẩm:</label><input type="text" name="id" placeholder="nhập 1 id sản phẩm"/>
-    <label for="newname">Tên mới:</label><input type="text" name="newname" placeholder="nhập tên mới cho id sản phẩm"/><br>
-    <input type="submit" value="Cập Nhật">
+    <label for="id">Product ID:</label><input type="text" name="id"/>
+    <label for="newname">New Name:</label><input type="text" name="newname"/><br>
+    <label for="newname">New Relase Date:</label><input type="text" name="newdate"/><br>
+    <label for="newname">New Price:</label><input type="text" name="newprice"/><br>
+    <input type="submit" value="Update">
 </form>
 
 <?php
@@ -47,7 +49,7 @@ if (empty(getenv("DATABASE_URL"))){
 
         // return the number of row affected
         //return $stmt->rowCount();
-$sql = "UPDATE product SET product_name = '$_POST[newname]' WHERE product_id = '$_POST[id]'";
+$sql = "UPDATE product SET name = '$_POST[newname]', release_date='$_POST[newdate]', '$_POST[newprice]' WHERE product_id = '$_POST[id]'";
       $stmt = $pdo->prepare($sql);
 if($stmt->execute() == TRUE){
     echo "Record updated successfully.";

@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./quocanh/mainstyle.css"/>
-    <title>ATN data center</title>
+    <title>Database interaction</title>
 </head>
 <body>
         <?php
@@ -24,31 +23,27 @@
         ));
         }  
 
-        $sql = "SELECT * FROM product ORDER BY product_id";
+        $sql = "SELECT * FROM product ORDER BY id";
         $stmt = $pdo->prepare($sql);
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $stmt->execute();
         $resultSet = $stmt->fetchAll();
     ?>
-    <h1>ATN cơ sở dữ liệu</h1>
-    <button onclick="location.href='index.php'">Trờ về trang chủ</button>
+    <h1>Database interaction</h1>
+    <button onclick="location.href='index.php'">Back to home page</button>
     <div class="container">
         <div class="grid-view">
             <div class="grid-item">
-                <img src="./database.png"/>
-                <a href="#" onClick="displayData()"><b>Xem dữ liệu SP</b></a>
+                <a href="#" onClick="displayData()"><b>Connect to database</b></a>
             </div>
             <div class="grid-item">
-                <img src="./database.png" />
-                <a href="./InsertData.php" target="framename"><b>Thêm DL</b></a>
+                <a href="./InsertData.php" target="framename"><b>Inser data</b></a>
             </div>
             <div class="grid-item">
-                <img src="./database.png"/>
-                <a href="./DeleteData.php" target="framename"><b>Xóa DL</b></a>
+                <a href="./DeleteData.php" target="framename"><b>Delete data</b></a>
             </div>
             <div class="grid-item">
-                <img src="./database.png"/>
-                <a href="UpdateData.php" target="framename"><b>Cập nhật DL</b></a>
+                <a href="UpdateData.php" target="framename"><b>Update data</b></a>
             </div>
             <div id ="displaychange" class="grid-item">
                 <table class="table table-bordered table-condensed">
@@ -67,9 +62,10 @@
                     ?>
                     
                     <tr>
-                        <td scope="row"><?php echo $row['product_id'] ?></td>
-                        <td><?php echo $row['product_name'] ?></td>
-                        <td><?php echo $row['nsx'] ?></td>     
+                        <td scope="row"><?php echo $row['id'] ?></td>
+                        <td><?php echo $row['name'] ?></td>
+                        <td><?php echo $row['release_date'] ?></td>  
+                        <td><?php echo $row['price'] ?></td>  
                     </tr>
                     
                     <?php
