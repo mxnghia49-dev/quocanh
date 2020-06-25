@@ -23,7 +23,7 @@
         <nav class="navbar">
             <a href="./index.php" class="active">Home</a>
             <a href="#">Product</a>
-            <a href="datacenter.php" class="right">Database interaction</a>
+            <a href="./database.php" class="right">Database interaction</a>
         </nav>
     </header>
     <!--<h1 class ="hightlight">Sản phẩm nổi bật</h1>-->
